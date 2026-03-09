@@ -11855,6 +11855,51 @@ body{background:var(--bg);color:var(--text);font-family:'Syne',sans-serif;min-he
   .add-btn{display:none}
 }
 
+
+
+/* ─── INFO TAB ─── */
+.tab-info{border-right:1px solid var(--border) !important;opacity:.7;}
+.tab-info.on{opacity:1;}
+
+/* ─── INFO PANEL ─── */
+.info-wrap{max-width:860px;margin:0 auto;padding:40px 24px 60px;}
+.info-hero{margin-bottom:32px;}
+.info-title{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:8px;}
+.info-sub{font-size:22px;font-weight:700;color:var(--fg);font-family:Georgia,serif;}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:28px;}
+.info-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:18px 20px;}
+.info-card-head{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;}
+.info-card-body{font-size:12px;color:var(--dimmer);line-height:1.7;}
+.info-card-body strong{color:var(--fg);}
+.info-url{color:var(--green);font-weight:700;font-family:'JetBrains Mono',monospace;font-size:11px;word-break:break-all;}
+.info-acts{margin-top:10px;padding-top:10px;border-top:1px solid var(--border);font-size:10px;color:var(--accent);letter-spacing:.04em;}
+.info-week{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:18px 24px;margin-bottom:28px;}
+.info-week-title{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--dimmer);margin-bottom:14px;}
+.info-week-grid{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+.info-day{display:flex;flex-direction:column;align-items:center;gap:4px;}
+.info-day-n{font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;letter-spacing:.1em;color:var(--accent);}
+.info-day-label{font-size:11px;color:var(--fg);font-weight:600;}
+.info-day-sep{color:var(--border);font-size:18px;margin-bottom:14px;}
+.info-start-btn{background:var(--accent);color:#fff;border:none;border-radius:8px;padding:12px 28px;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;display:block;margin:0 auto;}
+.info-start-btn:hover{opacity:.88;}
+@media(max-width:640px){.info-grid{grid-template-columns:1fr;}}
+
+/* ─── WORKBOOK ACCESS BAR ─── */
+#workbook-access-bar{
+  background:var(--bg2);border-bottom:1px solid var(--border);
+  padding:7px 20px;font-family:'JetBrains Mono',monospace;
+  font-size:10px;color:var(--dimmer);letter-spacing:.03em;
+  display:flex;align-items:center;flex-wrap:wrap;gap:6px;
+}
+#workbook-access-bar a{color:var(--accent);text-decoration:none;font-weight:700;}
+#workbook-access-bar a:hover{text-decoration:underline;}
+.wab-sep{color:var(--border);margin:0 2px;}
+
+/* ─── MODE BADGES on activities ─── */
+.mode-badge{display:inline-flex;align-items:center;gap:4px;font-size:9px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;border-radius:20px;padding:2px 9px;margin-left:8px;vertical-align:middle;}
+.mode-individual{background:var(--purplebg,#1a1030);color:var(--purple,#a855f7);border:1px solid var(--purplebdr,#4a2d7a);}
+.mode-group{background:var(--bluebg,#0d1f3a);color:var(--blue,#60a5fa);border:1px solid var(--bluebdr,#1e3a5f);}
+
 /* ─── PROGRESS BAR ─── */
 #progress-bar{
   height:2px;background:var(--border);
@@ -12001,14 +12046,16 @@ select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%
   background:var(--accbg);border-bottom:1px solid var(--border2);
   padding:7px 12px;font-family:'JetBrains Mono',monospace;
   font-size:9px;color:var(--acc2);letter-spacing:.08em;text-transform:uppercase;
+  min-height:32px;max-height:32px;overflow:hidden;
 }
 .dump-head input{
   background:transparent;border:none;border-radius:0;
   font-family:'JetBrains Mono',monospace;font-size:9px;
   color:var(--acc2);padding:0;letter-spacing:.08em;
   text-transform:uppercase;width:100%;
+  display:block;height:18px;line-height:18px;overflow:hidden;
 }
-.dump-head input:focus{background:transparent;border:none}
+.dump-head input:focus{background:transparent;border:none;outline:none;}
 .dump-body textarea{
   border:none;border-radius:0;background:transparent;
   min-height:110px;font-size:12px;padding:10px 12px;
@@ -12355,14 +12402,22 @@ hr{border:none;border-top:1px solid var(--border);margin:28px 0}
     <div class="save-pill" id="savePill">Saved</div>
   </div>
 </div>
+
+<!-- WORKBOOK ACCESS -->
+<div id="workbook-access-bar">
+  Open on your device: <a href="https://marianamargaritamedina-prog.github.io/ucd2026/" target="_blank">marianamargaritamedina-prog.github.io/ucd2026</a>
+  <span class="wab-sep">·</span> Individual activities: write alone first, then share verbally
+  <span class="wab-sep">·</span> Group activities: one screen, one driver, everyone contributes
+</div>
+
+
+
 <div id="progress-bar"><div id="progress-fill"></div></div>
 
 <!-- EXPORT TOOLBAR -->
 <div id="export-bar">
   <span class="eb-label">Save &amp; Export</span>
   <button class="eb-btn eb-primary" onclick="exportJSON()" title="Download a .json file — load it back on any device">⬇ Save File (.json)</button>
-  <button class="eb-btn" onclick="document.getElementById('importFile').click()" title="Load a previously saved .json file">⬆ Load File</button>
-  <input type="file" id="importFile" accept=".json" onchange="importJSON(event)">
   <div class="eb-sep"></div>
   <button class="eb-btn" onclick="exportText()" title="Copy all answers as plain text">📋 Copy as Text</button>
   <button class="eb-btn" onclick="printWorkbook()" title="Open print dialog — save as PDF from your browser">🖨 Print / PDF</button>
@@ -12405,6 +12460,10 @@ hr{border:none;border-top:1px solid var(--border);margin:28px 0}
 ">✓ Copied to clipboard</div>
 <div id="tabnav">
   <div class="tabs">
+    <button class="tab tab-info" onclick="switchTab('info',this)">
+      <span class="tab-meta">Start here</span>
+      ℹ How to use
+    </button>
     <button class="tab on" onclick="switchTab('d1',this)">
       <span class="tab-meta">Mon · 60 min</span>
       01 · Challenge
@@ -12432,6 +12491,82 @@ hr{border:none;border-top:1px solid var(--border);margin:28px 0}
     </button>
   </div>
 </div>
+
+<div class="panel" id="info">
+  <div class="info-wrap">
+
+    <div class="info-hero">
+      <div class="info-title">Lab Group Work · UCD 2026</div>
+      <div class="info-sub">Five days. One startup concept. Friday pitch.</div>
+    </div>
+
+    <div class="info-grid">
+
+      <div class="info-card">
+        <div class="info-card-head">📍 Access</div>
+        <div class="info-card-body">
+          Open this workbook on any device:<br>
+          <a class="info-url" href="https://marianamargaritamedina-prog.github.io/ucd2026/" target="_blank">marianamargaritamedina-prog.github.io/ucd2026</a><br><br>
+          Your answers save automatically in your browser. <strong>Use the same device all week.</strong> If you switch devices, use Save File to download your answers, then open the file on the new device.
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-card-head">👤 Individual activities</div>
+        <div class="info-card-body">
+          Everyone opens the workbook on their own device.<br>
+          Write alone for the time given — no talking.<br>
+          Then share verbally and agree a group answer.
+          <div class="info-acts">Frustration Dump · HMW Draft · Bridge sentences · Beat writing</div>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-card-head">👥 Group activities</div>
+        <div class="info-card-body">
+          One laptop on the table, visible to the group.<br>
+          One person types — rotate each session.<br>
+          Everyone contributes verbally.
+          <div class="info-acts">Persona · Lean Canvas · Assumption Inventory · Storyboard · Roles</div>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-card-head">💾 Saving your work</div>
+        <div class="info-card-body">
+          Auto-saves in your browser every time you type.<br>
+          Use <strong>Save File (.json)</strong> to back up or share with your team.<br>
+          Use <strong>Export as PowerPoint</strong> on Friday to build your pitch deck.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="info-week">
+      <div class="info-week-title">The week at a glance</div>
+      <div class="info-week-grid">
+        <div class="info-day"><span class="info-day-n">MON</span><span class="info-day-label">Challenge</span></div>
+        <div class="info-day-sep">→</div>
+        <div class="info-day"><span class="info-day-n">TUE</span><span class="info-day-label">Market & Client</span></div>
+        <div class="info-day-sep">→</div>
+        <div class="info-day"><span class="info-day-n">WED</span><span class="info-day-label">Solution & Prototype</span></div>
+        <div class="info-day-sep">→</div>
+        <div class="info-day"><span class="info-day-n">THU</span><span class="info-day-label">Validate & Pitch</span></div>
+        <div class="info-day-sep">→</div>
+        <div class="info-day"><span class="info-day-n">FRI</span><span class="info-day-label">Final Pitch</span></div>
+      </div>
+    </div>
+
+    <button class="info-start-btn" onclick="switchTab('d1', document.querySelector('.tab:nth-child(2)'))">Start with Monday →</button>
+
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════ -->
+<!-- HOW TO USE THIS WORKBOOK                  -->
+<!-- ══════════════════════════════════════════ -->
+
 
 <!-- ══════════════════════════════════════════ -->
 <!-- DAY 1 — CHALLENGE                         -->
@@ -12467,7 +12602,7 @@ hr{border:none;border-top:1px solid var(--border);margin:28px 0}
   <div class="section">
     <div class="sec-head">
       <div class="sec-num">01</div>
-      <div class="sec-title">Rapid Frustration Dump</div>
+      <div class="sec-title">Rapid Frustration Dump<span style="font-size:14px;margin-left:6px" title="Individual — everyone fills their own copy">👤</span></div>
       <div class="sec-badge">10 min</div>
     </div>
     <div class="sec-desc">Each person writes 3 real frustrations — theirs or someone they know. 3 minutes, no filtering. Share out loud, then move to clustering.</div>
@@ -12488,6 +12623,14 @@ hr{border:none;border-top:1px solid var(--border);margin:28px 0}
         <div class="dump-head"><input type="text" placeholder="Member 4 name"></div>
         <div class="dump-body"><textarea placeholder="Frustration 1…&#10;&#10;Frustration 2…&#10;&#10;Frustration 3…"></textarea></div>
       </div>
+      <div class="dump-card">
+        <div class="dump-head"><input type="text" placeholder="Member 5 name"></div>
+        <div class="dump-body"><textarea placeholder="Frustration 1…&#10;&#10;Frustration 2…&#10;&#10;Frustration 3…"></textarea></div>
+      </div>
+      <div class="dump-card">
+        <div class="dump-head"><input type="text" placeholder="Member 6 name (if present)"></div>
+        <div class="dump-body"><textarea placeholder="Frustration 1…&#10;&#10;Frustration 2…&#10;&#10;Frustration 3…"></textarea></div>
+      </div>
     </div>
   </div>
 
@@ -12495,7 +12638,7 @@ hr{border:none;border-top:1px solid var(--border);margin:28px 0}
   <div class="section">
     <div class="sec-head">
       <div class="sec-num">02</div>
-      <div class="sec-title">Cluster & Vote</div>
+      <div class="sec-title">Cluster & Vote<span style="font-size:14px;margin-left:6px" title="Group — one driver, all contribute verbally">👥</span></div>
       <div class="sec-badge">10 min</div>
     </div>
     <div class="sec-desc">Group similar frustrations into themes. Each person gets 1 vote. The winning cluster becomes your territory for the week.</div>
@@ -12531,7 +12674,7 @@ hr{border:none;border-top:1px solid var(--border);margin:28px 0}
   <div class="section">
     <div class="sec-head">
       <div class="sec-num">03</div>
-      <div class="sec-title">Draft "How Might We" + Peer Review</div>
+      <div class="sec-title">Draft "How Might We" + Peer Review<span style="font-size:14px;margin-left:6px" title="Individual — everyone fills their own copy">👤</span></div>
       <div class="sec-badge">25 min</div>
     </div>
     <div class="sec-desc">Use the formula to write your HMW statement in silence (10 min). Then read it to one other team — they ask you one question only: "Who specifically is the person you're describing?" Revise based on whether you could answer. Leave with one statement your whole team agrees on.</div>
@@ -12604,7 +12747,7 @@ hr{border:none;border-top:1px solid var(--border);margin:28px 0}
   <div class="section">
     <div class="sec-head">
       <div class="sec-num">04</div>
-      <div class="sec-title">Tonight: Claude Homework</div>
+      <div class="sec-title">Tonight: Claude Homework<span style="font-size:14px;margin-left:6px" title="Individual — everyone fills their own copy">👤</span></div>
       <div class="sec-badge">before Tuesday</div>
     </div>
     <div class="sec-desc">Paste your final HMW into Claude with the prompt below. Bring the output to Tuesday — the debrief opens with what surprised you most.</div>
@@ -12659,7 +12802,7 @@ hr{border:none;border-top:1px solid var(--border);margin:28px 0}
   <div class="section">
     <div class="sec-head">
       <div class="sec-num" style="background:#2d1f3d;border-color:#9b59b6;color:#9b59b6">↩</div>
-      <div class="sec-title">Claude Homework Debrief</div>
+      <div class="sec-title">Claude Homework Debrief<span style="font-size:14px;margin-left:6px" title="Group — one driver, all contribute verbally">👥</span></div>
       <div class="sec-badge" style="color:#9b59b6">8 min · opens Tuesday</div>
     </div>
     <div class="sec-desc">One team shares the assumption Claude flagged that surprised them most. Others raise a hand if the same came up for them. Facilitator reacts once. Bring the output from Monday's section 04.</div>
@@ -12691,10 +12834,10 @@ hr{border:none;border-top:1px solid var(--border);margin:28px 0}
   <div class="section">
     <div class="sec-head">
       <div class="sec-num">01–02</div>
-      <div class="sec-title">AI Persona + Real Conversation</div>
+      <div class="sec-title">AI Persona Draft + 1 Real Conversation<span style="font-size:14px;margin-left:6px" title="Group — one driver, all contribute verbally">👥</span></div>
       <div class="sec-badge">20 min</div>
     </div>
-    <div class="sec-desc">Two things happen at the same time. Person A: generate a first-cut persona with AI — name, role, city, top 3 frustrations, one quote. Person B: message or call someone who fits the profile, 3 questions only: Do they have the problem? How often? What do they do about it today? Then compare and update the card together.</div>
+    <div class="sec-desc">Start both simultaneously: one person generates a first-cut persona with AI (~8 min) while another messages or calls a real person who fits the profile — 3 questions max. Then compare and update together.</div>
 
     <div class="card" style="border-color:var(--accent)">
       <div class="card-lbl accent">Real person — fill this first, before the AI persona</div>
@@ -12782,7 +12925,7 @@ hr{border:none;border-top:1px solid var(--border);margin:28px 0}
   <div class="section">
     <div class="sec-head">
       <div class="sec-num">03</div>
-      <div class="sec-title">Reconcile + Pain Architecture Map</div>
+      <div class="sec-title">Reconcile + Pain Architecture Map<span style="font-size:14px;margin-left:6px" title="Group — one driver, all contribute verbally">👥</span></div>
       <div class="sec-badge">20 min</div>
     </div>
     <div class="sec-desc">Map your persona's pain at all 3 levels. One concrete sentence per layer. The emotional layer is where your positioning and messaging will live.</div>
@@ -12817,7 +12960,7 @@ hr{border:none;border-top:1px solid var(--border);margin:28px 0}
   <div class="section">
     <div class="sec-head">
       <div class="sec-num">04</div>
-      <div class="sec-title">Bottom-Up Market Sizing</div>
+      <div class="sec-title">Bottom-Up Market Sizing<span style="font-size:14px;margin-left:6px" title="Group — one driver, all contribute verbally">👥</span></div>
       <div class="sec-badge">10 min</div>
     </div>
     <div class="sec-desc">Find one real anchor stat and multiply up. Show every step of the math. Vague market claims ("the global wellness industry is $4.2T") destroy credibility on Friday.</div>
@@ -12900,7 +13043,7 @@ hr{border:none;border-top:1px solid var(--border);margin:28px 0}
   <div class="section">
     <div class="sec-head">
       <div class="sec-num" style="background:var(--bluebg);border-color:var(--blue)">T</div>
-      <div class="sec-title">Theory — The Lean Canvas: 9 Blocks That Force the Hard Questions</div>
+      <div class="sec-title">Theory — The Lean Canvas: 9 Blocks That Force the Hard Questions<span class="mode-badge mode-group">👥 Group</span></div>
       <div class="sec-badge" style="color:var(--blue)">10 min</div>
     </div>
     <div class="sec-desc">Facilitator walks through the Lean Canvas — why it replaces the Business Model Canvas for early-stage startups, and which 4 blocks most teams get wrong: Unfair Advantage, Key Metrics, Revenue Streams, and Unique Value Proposition.</div>
@@ -12910,7 +13053,7 @@ hr{border:none;border-top:1px solid var(--border);margin:28px 0}
   <div class="section">
     <div class="sec-head">
       <div class="sec-num">01</div>
-      <div class="sec-title">Crazy 8s → Top Concept</div>
+      <div class="sec-title">Crazy 8s → Top Concept<span style="font-size:14px;margin-left:6px" title="Individual — everyone fills their own copy">👤</span></div>
       <div class="sec-badge">10 min</div>
     </div>
     <div class="sec-desc">Each person sketches 8 solution ideas in 8 minutes. No filtering — the worst ideas lead to the best ones. Share, cluster, vote top 1. Define it in 3 sentences below.</div>
@@ -12947,7 +13090,7 @@ hr{border:none;border-top:1px solid var(--border);margin:28px 0}
   <div class="section">
     <div class="sec-head">
       <div class="sec-num">02</div>
-      <div class="sec-title">Lean Canvas — Full Draft</div>
+      <div class="sec-title">Lean Canvas — Full Draft<span style="font-size:14px;margin-left:6px" title="Group — one driver, all contribute verbally">👥</span></div>
       <div class="sec-badge">10 min</div>
     </div>
     <div class="sec-desc">Fill all 9 blocks fast (aim: 8 min). Then AI stress-test your 3 weakest blocks — flagged with ⚑. Flag every uncertainty — those become Thursday's validation targets.</div>
@@ -13004,7 +13147,7 @@ hr{border:none;border-top:1px solid var(--border);margin:28px 0}
   <div class="section">
     <div class="sec-head">
       <div class="sec-num">03</div>
-      <div class="sec-title">Build with Lovable</div>
+      <div class="sec-title">Build with Lovable<span style="font-size:14px;margin-left:6px" title="Group — one driver, all contribute verbally">👥</span></div>
       <div class="sec-badge">25 min</div>
     </div>
     <div class="sec-desc">Go to lovable.dev. Build a landing page or simple user flow — something clickable and showable in under 3 prompts. Include Lovable's built-in email signup form: this is how you'll measure real interest tonight. Use AI prompt #4 to structure your prompt before you open the tool.</div>
@@ -13035,7 +13178,7 @@ hr{border:none;border-top:1px solid var(--border);margin:28px 0}
   <div class="section">
     <div class="sec-head">
       <div class="sec-num">04</div>
-      <div class="sec-title">Share the Link + Write Value Proposition</div>
+      <div class="sec-title">Share the Link + Write Value Proposition<span style="font-size:14px;margin-left:6px" title="Group — one driver, all contribute verbally">👥</span></div>
       <div class="sec-badge">5 min</div>
     </div>
     <div class="sec-desc">Every team member gets the prototype link. Then distil everything into one tight value proposition statement — this will open your Friday pitch.</div>
@@ -13095,7 +13238,7 @@ hr{border:none;border-top:1px solid var(--border);margin:28px 0}
   <div class="section">
     <div class="sec-head">
       <div class="sec-num">01</div>
-      <div class="sec-title">Assumption Inventory</div>
+      <div class="sec-title">Assumption Inventory<span style="font-size:14px;margin-left:6px" title="Individual — everyone fills their own copy">👤</span></div>
       <div class="sec-badge">10 min</div>
     </div>
     <div class="sec-desc">List every assumption in your Lean Canvas. Mark each one. Work only on ✗ and ? today — those are the ones that could kill the business.</div>
@@ -13155,7 +13298,7 @@ hr{border:none;border-top:1px solid var(--border);margin:28px 0}
   <div class="section">
     <div class="sec-head">
       <div class="sec-num">02</div>
-      <div class="sec-title">Show the Prototype — Don't Describe It</div>
+      <div class="sec-title">Show the Prototype — Don't Describe It<span style="font-size:14px;margin-left:6px" title="Group — one driver, all contribute verbally">👥</span></div>
       <div class="sec-badge">30 min</div>
     </div>
     <div class="sec-desc">Show your Lovable prototype to 2–3 real people. Say: "Tell me what you think this does." Then be completely quiet. Watch where they hesitate. Don't explain anything — just observe.</div>
@@ -13208,7 +13351,7 @@ hr{border:none;border-top:1px solid var(--border);margin:28px 0}
   <div class="section">
     <div class="sec-head">
       <div class="sec-num">03</div>
-      <div class="sec-title">Measure Reactions + Signups</div>
+      <div class="sec-title">Measure Reactions + Signups<span style="font-size:14px;margin-left:6px" title="Group — one driver, all contribute verbally">👥</span></div>
       <div class="sec-badge">during sprint</div>
     </div>
     <div class="sec-desc">While you test the prototype, track what you observe — not what people say. Behaviour is the signal. Then check your Lovable dashboard: the built-in email form captures signups automatically, no setup needed. Share your prototype link tonight to collect more.</div>
@@ -13257,7 +13400,7 @@ hr{border:none;border-top:1px solid var(--border);margin:28px 0}
   <div class="section">
     <div class="sec-head">
       <div class="sec-num">04</div>
-      <div class="sec-title">Canvas Update + Learning Log</div>
+      <div class="sec-title">Canvas Update + Learning Log<span style="font-size:14px;margin-left:6px" title="Group — one driver, all contribute verbally">👥</span></div>
       <div class="sec-badge">20 min</div>
     </div>
     <div class="sec-desc">For every Canvas block you change, write: "We changed X because we saw/heard Y." This is your validation story — and one of the highest-signal moments in any pitch.</div>
@@ -13307,7 +13450,7 @@ hr{border:none;border-top:1px solid var(--border);margin:28px 0}
       <div class="day-tagline">Great ideas lose to better-told stories. This is craft time.</div>
       <div class="day-output">
         <div class="day-output-dot"></div>
-        <div class="day-output-txt">Output → 10-slide deck · Roles assigned · 1 rehearsal done · 3 Q&amp;A answers ready</div>
+        <div class="day-output-txt">Output → 10-beat deck · Roles assigned · 1 full run-through done (10 min) · 3 Q&amp;A answers ready</div>
       </div>
     </div>
   </div>
@@ -13316,7 +13459,7 @@ hr{border:none;border-top:1px solid var(--border);margin:28px 0}
   <div class="section">
     <div class="sec-head">
       <div class="sec-num" style="background:#FEF9E7;border-color:#f0a500;color:#f0a500">→</div>
-      <div class="sec-title">From Discovery to Story — 3 Sentences</div>
+      <div class="sec-title">From Discovery to Story — 3 Sentences<span style="font-size:14px;margin-left:6px" title="Individual — everyone fills their own copy">👤</span></div>
       <div class="sec-badge" style="color:#f0a500">5 min · opens Thursday PM</div>
     </div>
     <div class="sec-desc">Before you touch any slides, each person writes these three sentences individually. Then read them to each other. They are the skeleton of your validation slide.</div>
@@ -13335,7 +13478,7 @@ hr{border:none;border-top:1px solid var(--border);margin:28px 0}
           <textarea rows="2" style="flex:1;resize:vertical;" placeholder="The specific thing we updated in our Canvas or approach as a result"></textarea>
         </div>
       </div>
-      <div class="hint" style="margin-top:12px;color:#f0a500;">These three sentences = your validation slide. Copy them directly into Beat 06 of the storyboard below.</div>
+      <div class="hint" style="margin-top:12px;color:#f0a500;">These three sentences = your validation slide. Copy them directly into Beat 04 (Validation) of the storyboard below.</div>
     </div>
   </div>
 
@@ -13343,58 +13486,70 @@ hr{border:none;border-top:1px solid var(--border);margin:28px 0}
   <div class="section">
     <div class="sec-head">
       <div class="sec-num">01</div>
-      <div class="sec-title">Storyboard Before Slides</div>
+      <div class="sec-title">Storyboard Before Slides<span style="font-size:14px;margin-left:6px" title="Group — one driver, all contribute verbally">👥</span></div>
       <div class="sec-badge">15 min</div>
     </div>
     <div class="sec-desc">Map each pitch beat — one key message per beat. Agree on the flow before anyone opens a slide tool. The slide is the last thing you make, not the first.</div>
     <div class="beats-grid">
       <div class="beat">
-        <div class="beat-meta"><span class="beat-n">BEAT 01</span><span class="beat-t">30s</span></div>
-        <div class="beat-title">Hook</div>
-        <div class="beat-hint">Open with the human moment. Make the panel feel the problem before you name the solution.</div>
-        <textarea placeholder="Our opening line / story…"></textarea>
+        <div class="beat-meta"><span class="beat-n">BEAT 01</span><span class="beat-t">60s</span></div>
+        <div class="beat-title">Hook — Human Story</div>
+        <div class="beat-hint">Open with one specific person and one specific moment. Name them. Make the panel feel the problem before you name the solution. No company name yet.</div>
+        <textarea placeholder="Meet [name]. Every [day/week/month] they face… The moment that captures it is…"></textarea>
       </div>
       <div class="beat">
-        <div class="beat-meta"><span class="beat-n">BEAT 02</span><span class="beat-t">45s</span></div>
-        <div class="beat-title">Problem</div>
-        <div class="beat-hint">Who, how bad, how often. One number that makes the scale undeniable.</div>
-        <textarea placeholder="The problem is… for [persona]… [stat]…"></textarea>
+        <div class="beat-meta"><span class="beat-n">BEAT 02</span><span class="beat-t">60s</span></div>
+        <div class="beat-title">Problem — Scale & Cost</div>
+        <div class="beat-hint">Who has it, how often, how costly. One number that makes the size undeniable. Show the math, don't quote a report.</div>
+        <textarea placeholder="This affects [X people] in [market]. It costs them [time/money/frustration]. The current workaround is [Y] and it fails because…"></textarea>
       </div>
       <div class="beat">
-        <div class="beat-meta"><span class="beat-n">BEAT 03</span><span class="beat-t">60s</span></div>
-        <div class="beat-title">Solution</div>
-        <div class="beat-hint">What, for whom, why now. Show the prototype here — don't describe it, show it.</div>
-        <textarea placeholder="We built… it does… here's a glimpse…"></textarea>
+        <div class="beat-meta"><span class="beat-n">BEAT 03</span><span class="beat-t">90s</span></div>
+        <div class="beat-title">Solution — Show, Don't Describe</div>
+        <div class="beat-hint">Show the prototype here. One sentence on what it does, then show it live or on screen. Let the product speak. Don't narrate every click.</div>
+        <textarea placeholder="We built [name]. It does [one thing] for [persona]. Here's what it looks like… [show prototype for 45 seconds]"></textarea>
       </div>
       <div class="beat">
-        <div class="beat-meta"><span class="beat-n">BEAT 04</span><span class="beat-t">30s</span></div>
-        <div class="beat-title">Market</div>
-        <div class="beat-hint">TAM / SAM / SOM + your specific entry point. Show the math, not a quoted stat.</div>
-        <textarea placeholder="Market = … · Our entry = … · SOM = …"></textarea>
+        <div class="beat-meta"><span class="beat-n">BEAT 04</span><span class="beat-t">60s</span></div>
+        <div class="beat-title">Validation — What You Learned</div>
+        <div class="beat-hint">We thought… We found… So we changed… Intellectual honesty wins the room. The panel has seen too many teams that never tested anything.</div>
+        <textarea placeholder="We assumed [X]. We tested with [N people]. We found [Y]. So we changed [Z] in our model."></textarea>
       </div>
       <div class="beat">
-        <div class="beat-meta"><span class="beat-n">BEAT 05</span><span class="beat-t">30s</span></div>
+        <div class="beat-meta"><span class="beat-n">BEAT 05</span><span class="beat-t">60s</span></div>
+        <div class="beat-title">Market — Bottom-Up Math</div>
+        <div class="beat-hint">TAM / SAM / SOM with real numbers. Show the calculation, don't cite a market report. Your entry point matters more than the total market.</div>
+        <textarea placeholder="In Spain alone, [X] people face this. Our SAM = [Y]. Year 3 SOM = [Z] at [€] per user = €[ARR]."></textarea>
+      </div>
+      <div class="beat">
+        <div class="beat-meta"><span class="beat-n">BEAT 06</span><span class="beat-t">60s</span></div>
         <div class="beat-title">Business Model</div>
-        <div class="beat-hint">Who pays, how, when. One clean sentence. No hedging.</div>
-        <textarea placeholder="[Customer] pays €[X] per [month/use/transaction]…"></textarea>
+        <div class="beat-hint">Who pays, how much, when. One clean sentence. Then one slide on unit economics if you have them. No hedging, no "it depends."</div>
+        <textarea placeholder="[Customer type] pays €[X] per [month/transaction/year]. At [N] customers we break even. Our CAC assumption is [Y]."></textarea>
       </div>
       <div class="beat">
-        <div class="beat-meta"><span class="beat-n">BEAT 06</span><span class="beat-t">30s</span></div>
-        <div class="beat-title">Validation</div>
-        <div class="beat-hint">We assumed X. Tested by Y. Found Z. Changed our model in this way. Intellectual honesty wins.</div>
-        <textarea placeholder="We assumed… tested… found… changed…"></textarea>
-      </div>
-      <div class="beat">
-        <div class="beat-meta"><span class="beat-n">BEAT 07</span><span class="beat-t">15s</span></div>
-        <div class="beat-title">Team</div>
-        <div class="beat-hint">Why you're the right group for this specific problem — not general praise.</div>
-        <textarea placeholder="Why us: [specific reason we're well-placed]…"></textarea>
+        <div class="beat-meta"><span class="beat-n">BEAT 07</span><span class="beat-t">45s</span></div>
+        <div class="beat-title">Unfair Advantage</div>
+        <div class="beat-hint">What makes you structurally hard to copy? If you don't have one yet, say so honestly — and say what you'd need to build it. That's more credible than inventing one.</div>
+        <textarea placeholder="Our advantage is [specific thing — data / access / network / timing]. A funded competitor would need [X time/resource] to replicate it."></textarea>
       </div>
       <div class="beat">
         <div class="beat-meta"><span class="beat-n">BEAT 08</span><span class="beat-t">30s</span></div>
+        <div class="beat-title">Team</div>
+        <div class="beat-hint">Why you for this specific problem — not general praise. One sentence per person, specific to the challenge.</div>
+        <textarea placeholder="[Name] brings [specific relevant thing]. [Name] brings [specific relevant thing]. Together we cover [gap] because…"></textarea>
+      </div>
+      <div class="beat">
+        <div class="beat-meta"><span class="beat-n">BEAT 09</span><span class="beat-t">30s</span></div>
+        <div class="beat-title">Next 90 Days</div>
+        <div class="beat-hint">Three concrete milestones. Not "grow users" — specific, dated, measurable. Shows the panel you know what comes after Friday.</div>
+        <textarea placeholder="Month 1: [specific milestone]. Month 2: [specific milestone]. Month 3: [specific milestone]."></textarea>
+      </div>
+      <div class="beat">
+        <div class="beat-meta"><span class="beat-n">BEAT 10</span><span class="beat-t">30s</span></div>
         <div class="beat-title">Ask & Close</div>
-        <div class="beat-hint">Specific ask + memorable closing line. End with a statement, not "any questions?"</div>
-        <textarea placeholder="We're looking for… · Closing line: '…'"></textarea>
+        <div class="beat-hint">Specific ask + one memorable closing line. End with a statement, not "any questions?" The last sentence should be impossible to forget.</div>
+        <textarea placeholder="We're looking for [specific thing — not just feedback]. Closing line: '…'"></textarea>
       </div>
     </div>
   </div>
@@ -13403,7 +13558,7 @@ hr{border:none;border-top:1px solid var(--border);margin:28px 0}
   <div class="section">
     <div class="sec-head">
       <div class="sec-num">02</div>
-      <div class="sec-title">Build the Deck — One Message Per Slide</div>
+      <div class="sec-title">Build the Deck — One Message Per Slide<span style="font-size:14px;margin-left:6px" title="Group — one driver, all contribute verbally">👥</span></div>
       <div class="sec-badge">25 min</div>
     </div>
     <div class="sec-desc">Max 10 slides. For each slide, write the single thing someone must take away — one sentence. If you need more than one sentence, the slide is doing too much.</div>
@@ -13428,10 +13583,10 @@ hr{border:none;border-top:1px solid var(--border);margin:28px 0}
   <div class="section">
     <div class="sec-head">
       <div class="sec-num">03</div>
-      <div class="sec-title">First Run-Through Notes</div>
+      <div class="sec-title">First Run-Through Notes<span style="font-size:14px;margin-left:6px" title="Group — one driver, all contribute verbally">👥</span></div>
       <div class="sec-badge">15 min</div>
     </div>
-    <div class="sec-desc">One person presents (target: 4 min 30 sec). Others record only 3 things. Fix top 2 issues. Don't over-polish.</div>
+    <div class="sec-desc">One person presents (target: 10 min). Others note only 3 things: what was unclear, what was missing, most compelling moment. Fix top 2 issues only — don't over-polish.</div>
     <div class="card">
       <div class="g3">
         <div class="f">
@@ -13468,7 +13623,7 @@ hr{border:none;border-top:1px solid var(--border);margin:28px 0}
   <div class="section">
     <div class="sec-head">
       <div class="sec-num">04</div>
-      <div class="sec-title">Assign Roles + Prep Q&A</div>
+      <div class="sec-title">Assign Roles + Prep Q&A<span style="font-size:14px;margin-left:6px" title="Group — one driver, all contribute verbally">👥</span></div>
       <div class="sec-badge">5 min</div>
     </div>
     <div class="g2">
@@ -13508,7 +13663,7 @@ hr{border:none;border-top:1px solid var(--border);margin:28px 0}
     <div class="output-title">Thursday PM Output Checklist</div>
     <div class="checklist">
       <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"></div><div class="check-label">All 8 beats storyboarded with key messages</div></div>
-      <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"></div><div class="check-label">10-slide deck built — one message per slide</div></div>
+      <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"></div><div class="check-label">10-beat deck built — one message per beat</div></div>
       <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"></div><div class="check-label">First run-through done and timed</div></div>
       <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"></div><div class="check-label">Top 2 fixes identified and applied</div></div>
       <div class="check-item" onclick="toggleCheck(this)"><div class="check-box"></div><div class="check-label">Roles assigned — everyone knows their section</div></div>
@@ -14280,7 +14435,7 @@ async function exportPPTX() {
     // ── DAY 4B — PITCH WORK ──
     addDaySlide('4B', 'Pitch Work', 'Thursday · March 12 PM · 14:00 → 15:00',
       'Great ideas lose to better-told stories. This is craft time.',
-      '10-slide deck · Roles assigned · 1 rehearsal · 3 Q&A answers ready');
+      '10-beat deck (10 min) · Roles assigned · 1 run-through done · 3 Q&A answers ready');
 
     // Pitch storyboard
     const beatCards = document.querySelectorAll('#d4b .beat');
@@ -14291,7 +14446,7 @@ async function exportPPTX() {
       const value = card.querySelector('textarea')?.value?.trim() || '';
       if(value) beatRows.push({ label: `${title}  (${time})`, value });
     });
-    if(beatRows.length) addContentSlide('4B', '01  Pitch Storyboard', '15 min', beatRows.slice(0,7));
+    if(beatRows.length) addContentSlide('4B', '01  10-Beat Pitch (10 min)', '10 min', beatRows.slice(0,10));
 
     // Q&A prep
     const qaInputs = vals('#d4b .card.yellow input[type=text]');
@@ -14342,6 +14497,8 @@ async function exportPPTX() {
     btn.disabled = false;
   }
 }
+
+
 
 // ─── INIT ───
 document.addEventListener('DOMContentLoaded', () => {
